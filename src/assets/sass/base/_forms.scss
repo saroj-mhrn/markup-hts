@@ -1,0 +1,199 @@
+// ---------------------------------------------------------===
+// Forms
+// ---------------------------------------------------------===
+
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+input[type='date'],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: $form-border-radius;;
+  border-radius: $form-border-radius;
+  box-sizing: border-box;
+  border: 1px solid $form-element-border-color;
+  padding: $form-element-padding;
+  
+  &:focus,
+  &:hover {
+    border-color: $form-element-focus-border-color;
+  }
+  
+  @include placeholder {
+    color: $placeholder-color;
+  }
+}
+
+select {
+  -webkit-border-radius: $form-border-radius;;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  -webkit-appearance: none;
+  -webkit-border-radius: $form-border-radius;;
+  cursor: pointer;
+}
+
+@if $niceSelect {
+  .nice-select {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.3;
+    display: inline-block;
+    vertical-align: top;
+
+    [data-select] {
+      display: block;
+      border: 1px solid color(black,2);
+      border-radius: 3px;
+      color: rgba(#4A4A4A, .46);
+      background-color: color(white);
+      padding: 9px 33px 9px 15px;
+      position: relative;
+      text-decoration: none;
+      @extend .ellipsis;
+      @include animate(color);
+
+      &:after {
+        content: '\e901';
+        font: 7px/1 icomoon;
+        right: 13px;
+        color: color(black);
+        @include box-align(vc);
+      }
+
+      &.active,
+      &.selected,
+      &:hover {
+        color: color(black);
+      }
+
+      &.active {
+        &:after { content: '\e900'; }
+      }
+    }
+
+    ul {
+      @extend %listreset;
+      position: absolute;
+      z-index: 2;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border: 1px solid color(black,2);
+      background-color: color(white);
+      box-shadow: 0 0 5px color(black, 1a2);
+      box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.3);
+      margin-top: -2px;
+      border-radius: 0 0 3px 3px;
+
+      li {
+        border-bottom: 1px solid color(black, 1a2);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        color: color(black);
+        padding: 10px 14px;
+        @include animate(color background-color);
+      }
+
+      .active a,
+      a:hover {
+        background-color: color(black);
+        color: color(white);
+      }
+    }
+  }
+}
+
+@if $niceCheckRadio {
+  .nice-form {
+    input[type="checkbox"],
+    input[type="radio"] {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+
+      &:checked + .nice-label:before,
+      & + .nice-label:hover:before {
+        border-color: color(black);
+      }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"].square {
+      & + .nice-label:before {
+        border-radius: 2px;
+      }
+
+      &:checked + .nice-label:before {
+        content: '\e907';
+        background-color: color(black);
+        color: color(white);
+      }
+    }
+
+    input[type="radio"] {
+      & + .nice-label:before {
+        border-radius: 50%;
+      }
+
+      &:checked + .nice-label:before {
+        background-color: transparent;
+        content: '\e917';
+        color: color(black);
+        font-size: 12px;
+        padding-left: 1px;
+      }
+    }
+
+    .nice-label {
+      padding-left: 30px;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid color(black,2);
+        background-color: color(white);
+        font: 10px/1 icomoon;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        @include animate(border-color background-color color);
+      }
+    }
+  }
+}
