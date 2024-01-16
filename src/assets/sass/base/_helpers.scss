@@ -4,54 +4,54 @@
 
 // stretch
 %stretch {
-    inset: 0;
-    position: absolute;
+  inset: 0;
+  position: absolute;
 }
 
 // list reset
 %listreset {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 // clearfix
 %clearfix {
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 // clearfix
 .clearfix {
-    @extend %clearfix;
+  @extend %clearfix;
 }
 
 // transition
 %transition {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 // justify nav
 %justify {
-    text-align: justify; 
-    font-size: 1px;
-    line-height: 0px;
-    > * {
-        display: inline-block;
-        vertical-align: top;
-        text-align: left;
-        font-size: $font-size-base;
-        line-height: $line-height-base;
-    }
-    &:after { 
-        content: '';
-        width: 100%;
-        display: inline-block;
-        vertical-align: top;
-    }
+  text-align: justify;
+  font-size: 1px;
+  line-height: 0px;
+  > * {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 /// * Helper class to truncate and add ellipsis to a string too long for it to fit
@@ -60,13 +60,13 @@
 /// * 2. Add ellipsis at the end of the line.
 
 .ellipsis {
-    white-space: nowrap; /* 1 */
-    text-overflow: ellipsis; /* 2 */
-    overflow: hidden;
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
 }
 
 // Reset image
 %img-reset {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }

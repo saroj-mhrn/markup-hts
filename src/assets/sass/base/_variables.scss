@@ -4,30 +4,30 @@
 
 // Colors
 $colors: (
-    blue: (
-        1: #619ecb,
-        2: #517ea1,
-    ),
-    black: (
-        1: #1d1e21,
-        2: #1f1f24,
-        '1a2': rgba(#000,.02),
-    ),
-    white: (
-        1: #fff,
-        2: #fcfcfc,
-        3: #f6f6f6,
-        4: #fbfcff,
-    )
+  blue: (
+    1: #619ecb,
+    2: #517ea1,
+  ),
+  black: (
+    1: #1d1e21,
+    2: #1f1f24,
+    "1a2": rgba(#000, 0.02),
+  ),
+  white: (
+    1: #fff,
+    2: #fcfcfc,
+    3: #f6f6f6,
+    4: #fbfcff,
+  ),
 );
 
-$dir: '../..';
-$font-path: '#{$dir}/fonts';
-$image-path: '#{$dir}/images';
+$dir: "../..";
+$font-path: "#{$dir}/fonts";
+$image-path: "#{$dir}/images";
 
-$helvetica: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+$helvetica: "Helvetica Neue", "Arial", "Helvetica", sans-serif;
 $base-font-sans-serif: $helvetica;
-$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-font-serif: "Times New Roman", "Times", "Baskerville", "Georgia", serif;
 
 // Body
 $base-text-color: color(black) !default;
@@ -43,7 +43,7 @@ $base-min-width: 320px;
 // Liks
 $base-link-color: color(blue);
 
-// Buttons 
+// Buttons
 $btn-color: color(white) !default;
 $btn-background: color(black) !default;
 $btn-padding: 0.4em 0.7em !default;
@@ -51,10 +51,10 @@ $btn-font-size: inherit !default;
 
 // Forms
 $form-element-padding: $btn-padding !default;
-$form-element-border-color: color(black,2) !default;
+$form-element-border-color: color(black, 2) !default;
 $form-element-focus-border-color: color(black) !default;
 $form-border-radius: 5px !default;
-$placeholder-color: color(black,2) !default;
+$placeholder-color: color(black, 2) !default;
 
 // Headers
 $h1-font-size: 30px !default;
@@ -67,14 +67,13 @@ $h6-font-size: 15px !default;
 $headings-font-family: inherit !default;
 $headings-color: inherit !default;
 
-
 $animation-speed: 0.3s;
 
 // nice select
 $niceSelect: false;
 $niceCheckRadio: false;
 
-// grid 
+// grid
 $usegrid: true;
 $grid-count: 12;
 $grid-gutter: 30px;
