@@ -21,6 +21,12 @@ $colors: (
   ),
 );
 
+$blue: #619ecb;
+$black: #000;
+$black1: #1d1e21;
+$black2: #1f1f24;
+$white: #fff;
+
 $dir: "../..";
 $font-path: "#{$dir}/fonts";
 $image-path: "#{$dir}/images";
@@ -30,8 +36,8 @@ $base-font-sans-serif: $helvetica;
 $base-font-serif: "Times New Roman", "Times", "Baskerville", "Georgia", serif;
 
 // Body
-$base-text-color: color(black) !default;
-$base-background-color: color(white) !default;
+$base-text-color: $black1 !default;
+$base-background-color: $white !default;
 $font-size-base: 16px !default;
 $line-height-base: 1.2 !default;
 $base-font-family: $base-font-sans-serif !default;
@@ -41,20 +47,20 @@ $vertical-rhythm: ($line-height-base * 1em);
 $base-min-width: 320px;
 
 // Liks
-$base-link-color: color(blue);
+$base-link-color: $blue;
 
 // Buttons
-$btn-color: color(white) !default;
-$btn-background: color(black) !default;
+$btn-color: $white !default;
+$btn-background: $black1 !default;
 $btn-padding: 0.4em 0.7em !default;
 $btn-font-size: inherit !default;
 
 // Forms
 $form-element-padding: $btn-padding !default;
-$form-element-border-color: color(black, 2) !default;
-$form-element-focus-border-color: color(black) !default;
+$form-element-border-color: $black2 !default;
+$form-element-focus-border-color: $black1 !default;
 $form-border-radius: 5px !default;
-$placeholder-color: color(black, 2) !default;
+$placeholder-color: $black2 !default;
 
 // Headers
 $h1-font-size: 30px !default;
